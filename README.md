@@ -12,3 +12,8 @@ and prints for correct n being between 1 and 10.
 
 
 Basic task from university
+
+I follow these rules:
+Only one disk can be moved at a time.
+A disk can only be placed on an empty peg or a larger disk.
+All disks must be moved to the destination peg.
