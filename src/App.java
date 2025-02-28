@@ -49,7 +49,16 @@ public class App {
             if (!towers[from].isEmpty() && (towers[to].isEmpty() || towers[to].peek() > towers[from].peek())) {
                 int disk = towers[from].pop();
                 towers[to].push(disk);
-                System.out.printf("%d. Move disk %d from %c to %c. ", move, disk, pegs[from], pegs[to]);
+                if (move < 10){
+                    System.out.printf("   %d. Move disk %d from %c to %c. ", move, disk, pegs[from], pegs[to]);
+                } else
+                if(move < 100){
+                    System.out.printf("  %d. Move disk %d from %c to %c. ", move, disk, pegs[from], pegs[to]);
+                } else if (move < 1000){
+                    System.out.printf(" %d. Move disk %d from %c to %c. ", move, disk, pegs[from], pegs[to]);
+                }else {
+                    System.out.printf("%d. Move disk %d from %c to %c. ", move, disk, pegs[from], pegs[to]);
+                }
             }
             printState(A, B, C);
         }
